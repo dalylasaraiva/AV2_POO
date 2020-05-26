@@ -1,4 +1,6 @@
 package banco;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cliente {
 	
@@ -8,7 +10,16 @@ public class Cliente {
 	private String endereco;
 	private double saldo;
 	private String nome;
+	private List<Cartao> cartoes = new ArrayList<>();
+	public enum Categoria{
+		COMUM, MASTER,PREMIUM;
+	}
 	
+	protected Categoria categoriaCliente;
+	
+	public Categoria getCategoriaCliente () {
+		return categoriaCliente;
+	}
 	
 	public int getNumConta() {
 		return numConta;
@@ -47,6 +58,9 @@ public class Cliente {
 		this.nome = nome;
 	}
 	
+	public void novoCartao(Cartao c) {
+		this.cartoes.add(c);
+	}
 	
 	
 	

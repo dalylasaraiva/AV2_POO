@@ -7,6 +7,7 @@ public class Fatura {
 	private double valor;
 	private static final double JUROS_DIA = 0.10;
 	
+	
 	public String getDataPagamento() {
 		return dataPagamento;
 	}

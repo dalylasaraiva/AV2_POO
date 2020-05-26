@@ -1,5 +1,8 @@
 package banco;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cartao {
 	
 	private int numCartao;
@@ -7,6 +10,7 @@ public class Cartao {
 	private int senha;
 	private String nomeCliente;
 	private String dataVencimento;
+	private List<Fatura> faturas = new ArrayList<>(); //pode existir varias faturas de meses anteriores
 	
 	
 	public int getNumCartao() {
@@ -39,5 +43,10 @@ public class Cartao {
 	public void setDataVencimento(String dataVencimento) {
 		this.dataVencimento = dataVencimento;
 	}
+	
+	public void mulpFatura(Fatura f) {
+		this.faturas.add(f);
+	}
+	
 
 }
