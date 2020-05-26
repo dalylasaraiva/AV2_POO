@@ -48,5 +48,9 @@ public class Cartao {
 		this.faturas.add(f);
 	}
 	
+	public Fatura retornaFaturaPrincipal() {
+		return this.faturas.get(0);
+	}
+	
 
 }

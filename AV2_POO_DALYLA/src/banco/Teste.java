@@ -66,6 +66,28 @@ public class Teste {
 		f3.setDataVencimento("09/08");
 		f3.setValor(27.00);
 		
+		ca1.mulpFatura(f1);
+		ca2.mulpFatura(f2);
+		ca3.mulpFatura(f3);
+		
+		c1.novoCartao(ca1);
+		c2.novoCartao(ca2);
+		c3.novoCartao(ca3);
+		
+		
+		System.out.println("email: "+ c1.getNome());
+		System.out.println("cartao: "+ c1.retornaCartaoPrincipal().getNumCartao());
+		System.out.println("fatura: "+ c1.retornaCartaoPrincipal().retornaFaturaPrincipal().getValor());
+		
+		System.out.println("email: "+ c2.getNome());
+		System.out.println("cartao: "+ c2.retornaCartaoPrincipal().getNumCartao());
+		System.out.println("fatura: "+ c2.retornaCartaoPrincipal().retornaFaturaPrincipal().getValor());
+		
+		System.out.println("email: "+ c3.getNome());
+		System.out.println("cartao: "+ c3.retornaCartaoPrincipal().getNumCartao());
+		System.out.println("fatura: "+ c3.retornaCartaoPrincipal().retornaFaturaPrincipal().getValor());
+		
+		
 	}
 
 }

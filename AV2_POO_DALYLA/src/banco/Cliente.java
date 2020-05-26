@@ -57,6 +57,9 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	public Cartao retornaCartaoPrincipal() {
+		return this.cartoes.get(0);
+	}
 	
 	public void novoCartao(Cartao c) {
 		this.cartoes.add(c);
